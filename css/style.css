@@ -1,0 +1,17 @@
+:root{
+    --fundo: #f2f5f9;
+    --pricipal: #0e7490;
+    --hover: #155e75;
+    --card: #ffffff;
+    --text: #1e293b;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--text);
+}
