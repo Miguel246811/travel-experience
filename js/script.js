@@ -1,8 +1,16 @@
-const formulario = document.querySelector(#formCadatro)
 
-formulario.addEvenlistener("submit", function(event)){
+const formulario = document.querySelector("#formCadastro");
+
+formulario.addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const none = document.querySelector("#none").Value;
-    const destino = document.querySelector("#destinos")
-}
+    const nome = document.querySelector("#nome").value;
+    const destino = document.querySelector("#destino").value;
+
+    const mensagem = document.querySelector("#mensagem");
+
+    mensagem.textContent =
+        "Olá, " + nome + "! Sua próxima aventura será em " + destino + "!";
+
+    formulario.reset();
+});
