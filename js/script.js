@@ -1,12 +1,24 @@
     const botao = document.getElementById("botaoCriar");
-    const botaoApagar = document.getElementById("botaoApagar");
+    const botaoApagar = document.getElementById("botaoApagar")
     const retorno = document.getElementById("retorno");
 
-    botaoCriar.addEventListener("click", () => {
-        retorno.textContent = "Hoje é um ótimo dia para aprender JS!"
-    });
+    const frases = [
+        "Você está arrasando! 🚀",
+        "Hora de codar! 💻",
+        "Café, código e criatividade! ☕",
+        "JavaScript é mágica! 🌟"
+    ];
 
-    botaoApagar.addEventListener("click", () => {
-        retorno.textContent = "";
+    const cores = ["#fde68a", "#bfdbfe", "#bbf7d0", "#fbcfe8"];
 
-    });
+    botaoApagar.addEventListener("click", () =>{
+        const i = Math.floor( Math.random() * frases.length);
+        retorno.textContent = frases[i];
+        retorno.style.backgroundColor = cores[i]
+        retorno.style.fontSize = "24px";
+        retorno.style.padding = "15px";
+        retorno.style.borderRadius = "10px";
+        retorno.style.textAlign = "center";
+    })
+
+   
