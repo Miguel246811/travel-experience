@@ -1,24 +1,15 @@
-    const botao = document.getElementById("botaoCriar");
-    const botaoApagar = document.getElementById("botaoApagar")
-    const retorno = document.getElementById("retorno");
+const formCalculo = document.getElementById("formCalculo");
+const numero1 = document.getElementById("numero1");
+const numero2 = document.getElementById("numero2");
+const resultadoCalculo = document.getElementById("resultadoCalculo");
 
-    const frases = [
-        "Você está arrasando! 🚀",
-        "Hora de codar! 💻",
-        "Café, código e criatividade! ☕",
-        "JavaScript é mágica! 🌟"
-    ];
+function somar(event){
+    event.preventDefault();
 
-    const cores = ["#fde68a", "#bfdbfe", "#bbf7d0", "#fbcfe8"];
+    const a = Number(numero1.value);
+    const b = Number(numero2.value);
 
-    botaoApagar.addEventListener("click", () =>{
-        const i = Math.floor( Math.random() * frases.length);
-        retorno.textContent = frases[i];
-        retorno.style.backgroundColor = cores[i]
-        retorno.style.fontSize = "24px";
-        retorno.style.padding = "15px";
-        retorno.style.borderRadius = "10px";
-        retorno.style.textAlign = "center";
-    })
+    resultadoCalculo.textContent = "Resultado: " + (a = b);
+}
 
-   
+formCalculo.addEventListener("submit", somar);
